@@ -1,0 +1,137 @@
+# Configuración Cine Norte Automation System
+project:
+  title: "Cine Norte Automation"
+  region: "MX"
+  max_duration_sec: 180
+  spoiler_policy: "sin tercer acto ni giros críticos"
+
+branding:
+  colors:
+    primary: "#E50914"      # Rojo Cine Norte
+    background: "#0A0A0A"   # Negro profundo
+    accent: "#C0C0C0"       # Plateado metálico
+  fonts:
+    title: "Bebas Neue"     # Para títulos
+    body: "Inter"           # Para texto
+  logo_intro: "assets/logos/logo_intro.mov"
+  logo_outro: "assets/logos/logo_outro.mov"
+
+# Configuración de APIs
+apis:
+  tmdb:
+    api_key: "YOUR_TMDB_API_KEY"
+    base_url: "https://api.themoviedb.org/3"
+  justwatch:
+    api_key: "YOUR_JUSTWATCH_API_KEY"
+    base_url: "https://apis.justwatch.com"
+
+# Configuración de IA
+ai:
+  openai_api_key: "YOUR_OPENAI_API_KEY"
+  elevenlabs_api_key: "YOUR_ELEVENLABS_API_KEY"
+  elevenlabs_voice_id: "pNInz6obpgDQGcFmaJgB"  # Voz por defecto
+  whisper_model: "base"  # base, small, medium, large
+
+# Configuración de audio
+audio:
+  music_dir: "assets/music"
+  ducking_db: -8
+  target_lufs: -16  # YouTube: -16, Facebook: -18
+  sample_rate: 48000
+  bitrate: 320
+
+# Configuración de video
+video:
+  master_resolution: "1920x1080"
+  master_fps: 24
+  master_bitrate: "20M"
+  codec: "libx264"
+  audio_codec: "aac"
+  
+  # Formatos de salida
+  formats:
+    16x9:
+      resolution: "1920x1080"
+      platforms: ["YouTube", "Facebook"]
+    9x16:
+      resolution: "1080x1920"
+      platforms: ["TikTok", "Instagram Reels"]
+    1x1:
+      resolution: "1080x1080"
+      platforms: ["Instagram", "Facebook"]
+
+# Configuración de subtítulos
+subtitles:
+  font: "Inter"
+  font_size: 24
+  outline: 2
+  shadow: 1
+  max_lines: 2
+  max_chars_per_line: 42
+  sync_tolerance_ms: 100
+
+# Configuración de miniaturas
+thumbnails:
+  youtube:
+    resolution: "1280x720"
+    format: "png"
+  instagram:
+    resolution: "1080x1080"
+    format: "jpg"
+  facebook:
+    resolution: "1200x630"
+    format: "jpg"
+
+# Configuración de SEO
+seo:
+  max_title_length: 70
+  max_hashtags: 15
+  include_platform: true
+  include_year: true
+  include_genre: true
+
+# Configuración de plataformas
+platforms:
+  netflix:
+    name: "Netflix"
+    color: "#E50914"
+    logo: "assets/logos/netflix.svg"
+  hbo_max:
+    name: "HBO Max"
+    color: "#8B5CF6"
+    logo: "assets/logos/hbo_max.svg"
+  disney_plus:
+    name: "Disney+"
+    color: "#113CCF"
+    logo: "assets/logos/disney_plus.svg"
+  amazon_prime:
+    name: "Amazon Prime"
+    color: "#00A8E1"
+    logo: "assets/logos/amazon_prime.svg"
+  paramount_plus:
+    name: "Paramount+"
+    color: "#0064FF"
+    logo: "assets/logos/paramount_plus.svg"
+  apple_tv:
+    name: "Apple TV+"
+    color: "#000000"
+    logo: "assets/logos/apple_tv.svg"
+  magis_tv:
+    name: "MagisTV"
+    color: "#FF6B35"
+    logo: "assets/logos/magis_tv.svg"
+
+# Configuración de directorios
+directories:
+  projects: "projects"
+  assets: "assets"
+  exports: "exports"
+  prompts: "prompts"
+  temp: "temp"
+
+# Configuración de logging
+logging:
+  level: "INFO"
+  file: "cine_norte.log"
+  max_size_mb: 10
+  backup_count: 5

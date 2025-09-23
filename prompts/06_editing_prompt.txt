@@ -1,0 +1,26 @@
+Rol: Editor audiovisual con plantilla Cine Norte.
+
+Branding:
+- Colores: rojo #E50914, negro #0A0A0A, plateado #C0C0C0.
+- Tipos: Título Bebas Neue/Anton, cuerpo Inter/Roboto.
+- Intro y outro con logo y barrido de luz (3–5 s).
+
+Tarea:
+- Montar clips seleccionados a ritmo musical.
+- Insertar texto on-screen (frases destacadas del guion).
+- Lower-third con plataforma (logo si permitido).
+- Música libre de derechos (acción/suspenso) con ducking bajo voz.
+
+Audio:
+- Normalizar a -16 LUFS (YT) / -18 LUFS (FB si corresponde).
+- Sidechain ducking voz sobre música (objetivo -26 LUFS bajo voz).
+
+Salida máster:
+- 16:9 1920x1080, H.264 High, 20–24 Mbps, AAC 320 kbps, ≤180 s.
+
+Derivados:
+- 9:16 1080x1920 con auto-reframe y reposición de subtítulos.
+- 1:1 1080x1080 con safe margins.
+
+Entregables:
+- master_16x9.mp4, out_9x16.mp4, out_1x1.mp4.

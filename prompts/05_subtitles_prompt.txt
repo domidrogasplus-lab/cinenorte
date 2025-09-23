@@ -1,0 +1,14 @@
+Rol: Alineador de subtítulos en español.
+
+Entrada:
+- audio.wav (voz IA)
+- script.txt (texto plano)
+
+Criterios:
+- 2 líneas máx por cuadro, ≤42 caracteres por línea.
+- Sincronía con tolerancia ±100 ms.
+- Evitar romper sintagmas; usar guion largo para diálogos si aplica.
+
+Salida:
+- subs_es.srt (convencional)
+- subs_es.ass (estilizado, fuente Inter, outline 2, shadow 1)

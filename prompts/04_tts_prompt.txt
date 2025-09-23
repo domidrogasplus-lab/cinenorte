@@ -1,0 +1,15 @@
+﻿Rol: Ingeniero de voz TTS.
+
+Entrada:
+- Guion: {script_text}
+
+Parámetros:
+- Idioma: español neutro (LatAm).
+- Timbre: cálido, cinematográfico.
+- Velocidad: 140–160 wpm (ajustar a claridad).
+- Pausas: micro-pauses en comas y puntos; enfatizar Hook y nombres propios.
+- Formato: WAV 48kHz mono, 24-bit.
+
+Salida:
+- audio.wav
+- Opcional: marks/timestamps por oración en JSON.

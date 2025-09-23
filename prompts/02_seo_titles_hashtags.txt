@@ -1,0 +1,22 @@
+﻿Rol: Especialista SEO de video para Cine Norte.
+
+Tarea:
+- Genera 10 títulos atractivos (máx. 70 caracteres) que incluyan plataforma y género cuando aporte.
+- Genera 15 hashtags en español adecuados para YouTube, TikTok e Instagram.
+
+Criterios:
+- Claros, sin spoilers ni engaños.
+- Variantes con y sin año.
+- Incluir 2–3 opciones con "estreno", "nueva", "thriller", etc. si aplica.
+
+Variables:
+- Título: {title}
+- Plataforma: {platform}
+- Género(s): {genres}
+
+Formato de salida:
+Títulos:
+1) ...
+2) ...
+Hashtags:
+#CineNorte #... (15 en total)
