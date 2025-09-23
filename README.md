@@ -1,271 +1,301 @@
-# 🎬 Cine Norte Automation System
+# 🎬 Cine Norte - Sistema de Generación de Contenido Automatizado
 
-Sistema automatizado para generar contenido audiovisual de películas y series, optimizado para YouTube, Facebook, Instagram y TikTok con identidad visual Cine Norte.
+Sistema completo para generar contenido audiovisual optimizado para redes sociales, especializado en análisis cinematográficos con identidad de marca Cine Norte.
 
-## 🚀 Características
+## 🚀 Características Principales
 
-- **Generación automática de guiones** (1-3 min, sin spoilers)
-- **Locución con IA** (voz personalizable)
+### 📊 Análisis de Contenido Inteligente
+- **Selección automática** de películas y series populares
+- **Integración con TMDB** para datos actualizados
+- **Filtrado por criterios** (rating, popularidad, géneros)
+- **Soporte para múltiples plataformas** (Netflix, Disney+, HBO Max, etc.)
+
+### ✍️ Generación de Guiones con IA
+- **Guiones automáticos** optimizados para 2-3 minutos
+- **Múltiples estilos**: engaging, dramatic, informative
+- **Estructura profesional** con intro, desarrollo y cierre
+- **Sin spoilers importantes** para mantener el interés
+- **Exportación a .txt** para conversión a voz
+
+### 🎤 Narración y Subtítulos
+- **Text-to-Speech** con voz IA personalizable
 - **Subtítulos automáticos** en español sincronizados
-- **Edición con branding Cine Norte** (colores, tipografías, intro/outro)
-- **Múltiples formatos**: 16:9 (YouTube/Facebook), 9:16 (TikTok/Reels), 1:1 (Instagram)
-- **Miniaturas optimizadas** con identidad visual
-- **SEO automático** (títulos, hashtags, descripciones)
-- **Análisis de impacto visual** con IA
+- **Múltiples opciones de voz** (gTTS, ElevenLabs)
+- **Sincronización perfecta** con el contenido visual
+- **Formatos SRT y VTT** para máxima compatibilidad
 
-## 🎨 Identidad Visual
+### 🎨 Editor Audiovisual con Branding
+- **Identidad visual Cine Norte** integrada
+- **Paleta de colores**: Rojo #E50914, Negro #0A0A0A, Plateado #C0C0C0
+- **Intro y outro animados** con efectos de reflector
+- **Elementos visuales dinámicos** y transiciones profesionales
+- **Música de fondo** libre de derechos ajustada al tono
 
-- **Colores**: Rojo #E50914, Negro #0A0A0A, Plateado #C0C0C0
-- **Tipografías**: Bebas Neue (títulos), Inter (cuerpo)
-- **Intro/Outro**: Logo animado con barrido de luz tipo reflector
-- **Branding**: Lower-thirds, overlays, música libre de derechos
+### 📱 Formatos Múltiples
+- **YouTube/Facebook**: 16:9 (1920x1080)
+- **TikTok/Instagram Reels**: 9:16 (1080x1920)
+- **Instagram Posts**: 1:1 (1080x1080)
+- **Twitter**: 16:9 (1280x720)
+- **Facebook**: 1.91:1 (1200x630)
 
-## 📋 Requisitos
+### 🎯 Optimización con IA
+- **Análisis de impacto** y potencial viral
+- **Optimización SEO** automática
+- **Sugerencias de mejora** basadas en IA
+- **Análisis de engagement** y atractivo visual
+- **Recomendaciones personalizadas** para cada contenido
 
-- Python 3.8+
-- FFmpeg instalado en el sistema
-- APIs configuradas (OpenAI, ElevenLabs, TMDB)
+### 🖼️ Generación de Miniaturas
+- **Miniaturas optimizadas** para cada plataforma
+- **Estilos cinematográficos** profesionales
+- **Elementos visuales dinámicos** basados en el contenido
+- **Branding consistente** con Cine Norte
+- **Múltiples variaciones** para A/B testing
 
 ## 🛠️ Instalación
 
-1. **Clonar el repositorio**
-```bash
-git clone <repository-url>
-cd cine-norte-automation
-```
+### Requisitos del Sistema
+- Python 3.8 o superior
+- Windows 10/11 (recomendado)
+- 8GB RAM mínimo
+- 10GB espacio libre en disco
 
-2. **Instalar dependencias**
+### Instalación de Dependencias
+
 ```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/cine-norte.git
+cd cine-norte
+
+# Instalar dependencias
 pip install -r requirements.txt
+
+# Configurar variables de entorno
+cp .env.example .env
+# Editar .env con tus API keys
 ```
 
-3. **Configurar APIs**
-```bash
-cp config.yaml.example config.yaml
-# Editar config.yaml con tus API keys
+### Configuración de API Keys
+
+Crear archivo `.env` con las siguientes variables:
+
+```env
+# OpenAI para generación de guiones
+OPENAI_API_KEY=tu_openai_api_key
+
+# TMDB para datos de películas/series
+TMDB_API_KEY=tu_tmdb_api_key
+
+# ElevenLabs para voz IA (opcional)
+ELEVENLABS_API_KEY=tu_elevenlabs_api_key
+
+# YouTube API (opcional)
+YOUTUBE_API_KEY=tu_youtube_api_key
 ```
 
-4. **Verificar FFmpeg**
-```bash
-ffmpeg -version
-```
+## 🚀 Uso
 
-## ⚙️ Configuración
-
-Edita `config.yaml` con tus credenciales:
-
-```yaml
-ai:
-  openai_api_key: "tu_openai_api_key"
-  elevenlabs_api_key: "tu_elevenlabs_api_key"
-  elevenlabs_voice_id: "pNInz6obpgDQGcFmaJgB"
-
-apis:
-  tmdb:
-    api_key: "tu_tmdb_api_key"
-```
-
-## 🎯 Uso
-
-### Flujo completo automatizado
+### Interfaz de Línea de Comandos
 
 ```bash
-# Procesar contenido de Netflix
-python cine_norte_automation.py --platform Netflix --limit 3
-
-# Procesar por género
-python cine_norte_automation.py --genre Thriller --limit 5
-
-# Procesar todo el contenido disponible
-python cine_norte_automation.py --limit 10
+python main.py
 ```
 
-### Ejemplo paso a paso
-
-```bash
-# Ejecutar ejemplo completo
-python example_workflow.py
-
-# Verificar dependencias
-python example_workflow.py --check-deps
-```
-
-### Uso programático
+### Uso Programático
 
 ```python
-from cine_norte_automation import CineNorteAutomation
+from main import CineNorteSystem
 
 # Inicializar sistema
-automation = CineNorteAutomation('config.yaml')
+system = CineNorteSystem()
 
-# Seleccionar contenido
-content_list = automation.select_content(platform="Netflix", limit=5)
+# Generar contenido individual
+result = system.generate_content(
+    content_query="Spider-Man: No Way Home",
+    content_type="movie",
+    style="engaging"
+)
 
-# Procesar cada contenido
-for content in content_list:
-    results = automation.run_full_workflow(content)
-    print(f"Procesado: {content['title']}")
+# Generar contenido en lote
+results = system.generate_batch_content(count=5, content_type="movie")
+
+# Optimizar contenido existente
+suggestions = system.optimize_existing_content("mi_guion.txt")
+```
+
+### Ejemplo de Flujo Completo
+
+```python
+# 1. Seleccionar contenido
+content = system.content_analyzer.get_recommended_content(limit=1)[0]
+
+# 2. Generar guion
+script = system.script_generator.generate_script(content, "engaging")
+
+# 3. Generar voz
+voice_path = system.voice_generator.generate_voice_from_script(script.raw_text)
+
+# 4. Crear proyecto de video
+video_project = system.video_editor.create_video_project(script)
+
+# 5. Generar videos en múltiples formatos
+video_paths = system.multi_format_generator.generate_all_formats(video_project)
+
+# 6. Generar miniaturas
+thumbnail_paths = system.multi_format_generator.generate_thumbnails(video_project)
+
+# 7. Análisis de impacto
+analysis = system.ai_optimizer.analyze_content_impact(video_project)
 ```
 
 ## 📁 Estructura del Proyecto
 
 ```
-cine-norte-automation/
-├── cine_norte_automation.py    # Script principal
-├── config.yaml                 # Configuración
-├── requirements.txt            # Dependencias
-├── ffmpeg_templates.py         # Plantillas FFmpeg
-├── example_workflow.py         # Ejemplo de uso
-├── prompts/                    # Prompts de IA
-│   ├── 01_script_prompt.txt
-│   ├── 02_seo_titles_hashtags.txt
-│   ├── 03_scene_selection.txt
-│   ├── 04_tts_prompt.txt
-│   ├── 05_subtitles_prompt.txt
-│   ├── 06_editing_prompt.txt
-│   ├── 07_thumbnail_prompt.txt
-│   └── 08_ai_recommendations.txt
-├── projects/                   # Proyectos en proceso
-├── exports/                    # Videos finales
-├── assets/                     # Recursos (música, logos, etc.)
-└── temp/                       # Archivos temporales
+cine-norte/
+├── src/                          # Código fuente
+│   ├── content_analyzer.py       # Análisis de contenido
+│   ├── script_generator.py       # Generación de guiones
+│   ├── voice_generator.py        # Narración y subtítulos
+│   ├── video_editor.py           # Editor audiovisual
+│   ├── multi_format_generator.py # Formatos múltiples
+│   ├── ai_optimizer.py           # Optimización con IA
+│   └── thumbnail_generator.py    # Miniaturas y SEO
+├── output/                       # Archivos generados
+│   ├── videos/                   # Videos en múltiples formatos
+│   ├── thumbnails/               # Miniaturas
+│   ├── scripts/                  # Guiones en texto
+│   ├── audio/                    # Archivos de voz
+│   └── subtitles/                # Subtítulos
+├── assets/                       # Recursos estáticos
+├── temp/                         # Archivos temporales
+├── logs/                         # Logs del sistema
+├── config.py                     # Configuración
+├── main.py                       # Interfaz principal
+└── requirements.txt              # Dependencias
 ```
 
-## 🎬 Flujo de Trabajo
+## 🎯 Características Avanzadas
 
-1. **Selección de contenido** - TMDB API + JustWatch
-2. **Análisis de escenas** - Detección de cortes + scoring de impacto
-3. **Generación de guion** - LLM (GPT-4) con prompts especializados
-4. **Locución IA** - ElevenLabs con voz personalizable
-5. **Subtítulos** - Whisper + sincronización automática
-6. **Edición** - FFmpeg con plantillas Cine Norte
-7. **Exportación** - Múltiples formatos (16:9, 9:16, 1:1)
-8. **SEO** - Títulos y hashtags optimizados
-9. **Miniaturas** - Diseño con identidad visual
+### Análisis de Impacto con IA
+- **Score de engagement** (0-1)
+- **Potencial viral** basado en tendencias
+- **Optimización SEO** automática
+- **Atractivo visual** evaluado por IA
+- **Recomendaciones personalizadas**
 
-## 🎨 Personalización
+### Optimización Automática
+- **Títulos optimizados** para SEO
+- **Hashtags trending** automáticos
+- **Descripciones optimizadas** para cada plataforma
+- **Keywords relevantes** extraídas automáticamente
+- **Sugerencias de mejora** basadas en datos
 
-### Colores y Branding
+### Branding Consistente
+- **Logo Cine Norte** integrado
+- **Paleta de colores** consistente
+- **Tipografías** profesionales
+- **Elementos visuales** reconocibles
+- **Identidad de marca** en todos los formatos
 
-Edita `config.yaml`:
+## 📊 Métricas y Análisis
 
-```yaml
-branding:
-  colors:
-    primary: "#E50914"      # Rojo Cine Norte
-    background: "#0A0A0A"   # Negro profundo
-    accent: "#C0C0C0"       # Plateado metálico
-  fonts:
-    title: "Bebas Neue"
-    body: "Inter"
+El sistema genera reportes detallados incluyendo:
+
+- **Análisis de impacto** completo
+- **Métricas de engagement** predichas
+- **Optimización SEO** aplicada
+- **Sugerencias de mejora** específicas
+- **Datos de rendimiento** esperado
+
+## 🔧 Configuración Avanzada
+
+### Personalización de Voz
+```python
+# Configurar voz personalizada
+voice_settings = VoiceSettings(
+    language="es",
+    speed=1.0,
+    pitch=0.0,
+    volume=1.0
+)
 ```
 
-### Voz IA
-
-Cambia la voz en `config.yaml`:
-
-```yaml
-ai:
-  elevenlabs_voice_id: "tu_voice_id_aqui"
+### Personalización de Branding
+```python
+# Modificar colores de marca
+BRANDING = {
+    "colors": {
+        "primary": "#E50914",    # Rojo Netflix
+        "secondary": "#0A0A0A",  # Negro profundo
+        "accent": "#C0C0C0"      # Plateado metálico
+    }
+}
 ```
 
-### Formatos de Video
-
-Ajusta resoluciones y bitrates:
-
-```yaml
-video:
-  master_resolution: "1920x1080"
-  master_fps: 24
-  master_bitrate: "20M"
+### Configuración de Formatos
+```python
+# Añadir nuevos formatos
+VIDEO_CONFIG["formats"]["custom"] = {
+    "width": 1920,
+    "height": 1080,
+    "ratio": "16:9"
+}
 ```
 
-## 🔧 Troubleshooting
+## 🐛 Solución de Problemas
 
-### Error: FFmpeg no encontrado
-```bash
-# Windows (con Chocolatey)
-choco install ffmpeg
+### Problemas Comunes
 
-# macOS (con Homebrew)
-brew install ffmpeg
+1. **Error de API Keys**
+   - Verificar que las API keys estén configuradas correctamente
+   - Asegurar que las keys tengan los permisos necesarios
 
-# Ubuntu/Debian
-sudo apt update && sudo apt install ffmpeg
-```
+2. **Error de Dependencias**
+   - Ejecutar `pip install -r requirements.txt`
+   - Verificar versión de Python (3.8+)
 
-### Error: API keys no configuradas
-1. Verifica que `config.yaml` existe
-2. Confirma que las API keys son válidas
-3. Revisa los logs en `cine_norte.log`
+3. **Error de Memoria**
+   - Reducir el número de contenidos en lote
+   - Cerrar otras aplicaciones
 
-### Error: Dependencias faltantes
-```bash
-pip install -r requirements.txt --upgrade
-```
+4. **Error de Red**
+   - Verificar conexión a internet
+   - Verificar configuración de proxy si aplica
 
-## 📊 Salida
+### Logs y Debugging
 
-### Archivos generados por proyecto:
+Los logs se guardan en `logs/cine_norte.log` con información detallada para debugging.
 
-- `script.txt` - Guion narrado
-- `voiceover.wav` - Audio generado por IA
-- `subtitles_es.srt` - Subtítulos en español
-- `thumbnail.png` - Miniatura optimizada
-- `video_16x9.mp4` - YouTube/Facebook
-- `video_9x16.mp4` - TikTok/Reels
-- `video_1x1.mp4` - Instagram/Facebook
-- `metadata.json` - Títulos, hashtags, timestamps
+## 🤝 Contribuciones
 
-### Estructura de exportación:
-
-```
-exports/
-└── 20231201_Pelicula_Titulo/
-    ├── video/
-    │   ├── video_16x9.mp4
-    │   ├── video_9x16.mp4
-    │   └── video_1x1.mp4
-    ├── audio/
-    │   └── voiceover.wav
-    ├── subtitles/
-    │   └── subtitles_es.srt
-    ├── script/
-    │   └── script.txt
-    ├── thumbnails/
-    │   ├── thumb_yt.png
-    │   └── thumb_ig.jpg
-    └── metadata/
-        └── meta.json
-```
-
-## 🤝 Contribuir
+¡Las contribuciones son bienvenidas! Por favor:
 
 1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
-## 🆘 Soporte
+## 🙏 Agradecimientos
 
-- **Issues**: [GitHub Issues](https://github.com/tu-repo/issues)
-- **Documentación**: [Wiki](https://github.com/tu-repo/wiki)
-- **Email**: soporte@cinenorte.com
+- **TMDB** por la API de datos cinematográficos
+- **OpenAI** por la generación de guiones con IA
+- **MoviePy** por el procesamiento de video
+- **PIL/Pillow** por el procesamiento de imágenes
+- **gTTS** por la síntesis de voz
 
-## 🎯 Roadmap
+## 📞 Soporte
 
-- [ ] Integración con más plataformas de streaming
-- [ ] Análisis de sentimientos en guiones
-- [ ] Plantillas de After Effects
-- [ ] Dashboard web para gestión
-- [ ] API REST para integración
-- [ ] Machine Learning para optimización automática
+Para soporte técnico o preguntas:
+
+- 📧 Email: soporte@cinenorte.com
+- 💬 Discord: Cine Norte Community
+- 📱 Twitter: @CineNorteAI
 
 ---
 
-**Cine Norte** - Automatizando la creación de contenido cinematográfico 🎬✨
+**Cine Norte** - Tu canal de análisis cinematográfico automatizado 🎬✨

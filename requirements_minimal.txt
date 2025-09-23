@@ -1,0 +1,33 @@
+# Cine Norte - Dependencias Mínimas
+# Versión simplificada para instalación en Windows
+
+# Análisis de contenido y web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Procesamiento de texto y IA
+openai>=1.0.0
+
+# Procesamiento de video y audio
+moviepy>=1.0.0
+Pillow>=10.0.0
+pydub>=0.25.0
+
+# Text-to-Speech y subtítulos
+gTTS>=2.4.0
+pysrt>=1.1.0
+pyttsx3>=2.90
+
+# Generación de imágenes y gráficos
+matplotlib>=3.8.0
+
+# Base de datos y almacenamiento
+pandas>=2.0.0
+
+# APIs de streaming
+tmdbv3api>=1.8.0
+
+# Utilidades
+python-dotenv>=1.0.0
+tqdm>=4.60.0
+colorama>=0.4.0
