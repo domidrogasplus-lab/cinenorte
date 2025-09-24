@@ -1,52 +1,26 @@
-# Cine Norte - Sistema de Generación de Contenido Automatizado
 # Dependencias principales
-
-# Análisis de contenido y web scraping
+streamlit==1.28.1
 requests==2.31.0
 beautifulsoup4==4.12.2
-selenium==4.15.2
-webdriver-manager==4.0.1
-
-# Procesamiento de texto y IA
-openai>=1.0.0
-transformers>=4.30.0
-torch>=2.6.0
-nltk==3.8.1
-# spacy==3.7.2  # Comentado por problemas de compilación en Windows
-
-# Procesamiento de video y audio
-moviepy>=1.0.0
-opencv-python>=4.8.0
-Pillow>=10.0.0
+openai==1.3.0
+moviepy==1.0.3
+Pillow==10.1.0
+numpy==1.24.3
+pandas==2.1.4
+python-dotenv==1.0.0
+youtube-dl==2021.12.17
+yt-dlp==2023.12.30
+gtts==2.4.0
 pydub==0.25.1
-# librosa==0.10.1  # Comentado por problemas de compilación en Windows
-
-# Text-to-Speech y subtítulos
-gTTS>=2.4.0
-pysrt>=1.1.0
-openai-whisper>=20231117
-
-# Generación de imágenes y gráficos
-matplotlib>=3.8.0
-seaborn>=0.13.0
-imageio>=2.30.0
-
-# Base de datos y almacenamiento
-# sqlite3  # Incluido en Python por defecto
-pandas>=2.0.0
-numpy>=1.24.0,<2.0.0
-
-# APIs de streaming
-tmdbv3api>=1.8.0
-imdbpy>=2022.7.0
-
-# Utilidades
-python-dotenv>=1.0.0
-schedule>=1.2.0
-tqdm>=4.60.0
-colorama>=0.4.0
-
-# Desarrollo y testing
-pytest>=7.0.0
-black>=23.0.0
-flake8>=6.0.0
+opencv-python==4.8.1.78
+scikit-image==0.21.0
+matplotlib==3.8.2
+seaborn==0.13.0
+textblob==0.17.1
+transformers==4.35.2
+torch==2.1.1
+torchvision==0.16.1
+torchaudio==2.1.1
+accelerate==0.24.1
+sentencepiece==0.1.99
+protobuf==4.25.1

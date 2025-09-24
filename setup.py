@@ -1,103 +1,71 @@
 """
 Script de configuración para Cine Norte
+Configura el entorno y verifica dependencias
 """
+from setuptools import setup, find_packages
 
-import os
-import sys
-import subprocess
-from pathlib import Path
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-def create_directories():
-    """Crea los directorios necesarios"""
-    directories = [
-        "output",
-        "output/videos",
-        "output/thumbnails", 
-        "output/scripts",
-        "output/audio",
-        "output/subtitles",
-        "temp",
-        "temp/audio",
-        "temp/video",
-        "temp/thumbnails",
-        "temp/formats",
-        "assets",
-        "assets/music",
-        "assets/fonts",
-        "assets/images",
-        "logs"
-    ]
-    
-    for directory in directories:
-        Path(directory).mkdir(parents=True, exist_ok=True)
-        print(f"✅ Directorio creado: {directory}")
+with open("requirements.txt", "r", encoding="utf-8") as fh:
+    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
-def install_dependencies():
-    """Instala las dependencias de Python"""
-    try:
-        print("📦 Instalando dependencias...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements_minimal.txt"])
-        print("✅ Dependencias instaladas exitosamente")
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Error instalando dependencias: {e}")
-        return False
-    return True
-
-def create_env_file():
-    """Crea el archivo .env si no existe"""
-    env_file = Path(".env")
-    env_example = Path("env.example")
-    
-    if not env_file.exists() and env_example.exists():
-        env_example.rename(env_file)
-        print("✅ Archivo .env creado desde env.example")
-        print("⚠️  Recuerda configurar tus API keys en el archivo .env")
-    elif env_file.exists():
-        print("✅ Archivo .env ya existe")
-    else:
-        print("⚠️  No se encontró env.example, crea manualmente el archivo .env")
-
-def check_python_version():
-    """Verifica la versión de Python"""
-    if sys.version_info < (3, 8):
-        print("❌ Se requiere Python 3.8 o superior")
-        print(f"   Versión actual: {sys.version}")
-        return False
-    else:
-        print(f"✅ Versión de Python: {sys.version}")
-        return True
-
-def main():
-    """Función principal de configuración"""
-    print("🎬 CINE NORTE - Configuración del Sistema")
-    print("=" * 50)
-    
-    # Verificar versión de Python
-    if not check_python_version():
-        sys.exit(1)
-    
-    # Crear directorios
-    print("\n📁 Creando directorios...")
-    create_directories()
-    
-    # Instalar dependencias
-    print("\n📦 Instalando dependencias...")
-    if not install_dependencies():
-        print("❌ Error en la instalación. Revisa los logs.")
-        sys.exit(1)
-    
-    # Crear archivo .env
-    print("\n⚙️  Configurando variables de entorno...")
-    create_env_file()
-    
-    print("\n" + "=" * 50)
-    print("✅ CONFIGURACIÓN COMPLETADA")
-    print("=" * 50)
-    print("\n📋 Próximos pasos:")
-    print("1. Configura tus API keys en el archivo .env")
-    print("2. Ejecuta: python main.py")
-    print("3. ¡Disfruta generando contenido con Cine Norte!")
-    print("\n🎬 ¡Bienvenido a Cine Norte!")
-
-if __name__ == "__main__":
-    main()
+setup(
+    name="cine-norte",
+    version="1.0.0",
+    author="Cine Norte Team",
+    author_email="soporte@cinenorte.com",
+    description="Generador Automatizado de Contenido Audiovisual para Redes Sociales",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/tu-usuario/cine-norte",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Intended Audience :: End Users/Desktop",
+        "Topic :: Multimedia :: Video",
+        "Topic :: Multimedia :: Sound/Audio",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+    ],
+    python_requires=">=3.8",
+    install_requires=requirements,
+    extras_require={
+        "dev": [
+            "pytest>=6.0",
+            "pytest-cov>=2.0",
+            "black>=21.0",
+            "flake8>=3.8",
+            "mypy>=0.800",
+        ],
+        "gpu": [
+            "torch[cuda]>=1.9.0",
+            "torchvision[cuda]>=0.10.0",
+            "torchaudio[cuda]>=0.9.0",
+        ],
+    },
+    entry_points={
+        "console_scripts": [
+            "cine-norte=run:main",
+        ],
+    },
+    include_package_data=True,
+    package_data={
+        "": ["*.txt", "*.md", "*.yml", "*.yaml"],
+    },
+    keywords=[
+        "video", "audio", "ai", "machine-learning", "streaming", 
+        "content-creation", "social-media", "automation", "cinema"
+    ],
+    project_urls={
+        "Bug Reports": "https://github.com/tu-usuario/cine-norte/issues",
+        "Source": "https://github.com/tu-usuario/cine-norte",
+        "Documentation": "https://github.com/tu-usuario/cine-norte/wiki",
+    },
+)

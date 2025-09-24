@@ -1,0 +1,19 @@
+# Configuración de APIs
+OPENAI_API_KEY=tu_clave_openai_aqui
+HUGGINGFACE_API_KEY=tu_clave_huggingface_aqui
+TMDB_API_KEY=tu_clave_tmdb_aqui
+OMDB_API_KEY=tu_clave_omdb_aqui
+
+# Configuración de rutas
+OUTPUT_DIR=./output
+TEMP_DIR=./temp
+ASSETS_DIR=./assets
+
+# Configuración de calidad
+VIDEO_QUALITY=1080p
+AUDIO_QUALITY=high
+
+# Configuración de redes sociales
+YOUTUBE_API_KEY=tu_clave_youtube_aqui
+FACEBOOK_ACCESS_TOKEN=tu_token_facebook_aqui
+INSTAGRAM_ACCESS_TOKEN=tu_token_instagram_aqui

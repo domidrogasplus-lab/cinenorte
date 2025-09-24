@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  cine-norte:
+    build: .
+    container_name: cine-norte-app
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TMDB_API_KEY=${TMDB_API_KEY}
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - OMDB_API_KEY=${OMDB_API_KEY}
+    volumes:
+      - ./output:/app/output
+      - ./temp:/app/temp
+      - ./assets:/app/assets
+      - ./.env:/app/.env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Servicio opcional para base de datos (futuro)
+  # redis:
+  #   image: redis:alpine
+  #   container_name: cine-norte-redis
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
+
+  # Servicio opcional para almacenamiento (futuro)
+  # minio:
+  #   image: minio/minio
+  #   container_name: cine-norte-minio
+  #   ports:
+  #     - "9000:9000"
+  #     - "9001:9001"
+  #   environment:
+  #     - MINIO_ROOT_USER=admin
+  #     - MINIO_ROOT_PASSWORD=password123
+  #   volumes:
+  #     - minio_data:/data
+  #   command: server /data --console-address ":9001"
+  #   restart: unless-stopped
+
+# volumes:
+#   minio_data:
