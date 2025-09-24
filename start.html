@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Norte - Inicio Rápido</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #E50914, #0A0A0A);
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(229, 9, 20, 0.5); }
+            to { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 30px rgba(229, 9, 20, 0.8); }
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: #C0C0C0;
+            margin-bottom: 2rem;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #E0E0E0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #E50914;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #C0C0C0;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #E50914, #8B0000);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #C0C0C0, #808080);
+            color: #0A0A0A;
+            box-shadow: 0 4px 15px rgba(192, 192, 192, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(192, 192, 192, 0.4);
+        }
+        
+        .requirements {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .requirements h3 {
+            color: #E50914;
+            margin-bottom: 1rem;
+        }
+        
+        .requirements ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .requirements li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .requirements li:before {
+            content: "✓ ";
+            color: #E50914;
+            font-weight: bold;
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: #C0C0C0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 3rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">🎬 CINE NORTE</h1>
+        <p class="tagline">Generador Automatizado de Contenido Audiovisual</p>
+        
+        <div class="description">
+            <p>Crea contenido cinematográfico profesional para redes sociales con la potencia de la IA. 
+            Genera guiones, videos, audio y miniaturas optimizados para YouTube, TikTok, Instagram y más.</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-title">Análisis Inteligente</div>
+                <div class="feature-desc">Busca y analiza películas y series de todas las plataformas de streaming</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <div class="feature-title">Guiones con IA</div>
+                <div class="feature-desc">Genera guiones dinámicos y atractivos con OpenAI GPT-4</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎤</div>
+                <div class="feature-title">Síntesis de Voz</div>
+                <div class="feature-desc">Convierte texto a voz con múltiples perfiles y subtítulos automáticos</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎬</div>
+                <div class="feature-title">Editor de Video</div>
+                <div class="feature-desc">Crea videos profesionales con branding Cine Norte</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">Formatos Múltiples</div>
+                <div class="feature-desc">Optimizado para YouTube, TikTok, Instagram, Facebook y Twitter</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">Optimización IA</div>
+                <div class="feature-desc">Analiza y optimiza tu contenido para máximo engagement</div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <a href="index.html" class="btn">🚀 Iniciar Aplicación</a>
+            <a href="README.md" class="btn btn-secondary">📖 Ver Documentación</a>
+        </div>
+        
+        <div class="requirements">
+            <h3>⚡ Inicio Rápido</h3>
+            <ul>
+                <li>Abre <code>index.html</code> en tu navegador</li>
+                <li>Configura tus APIs (OpenAI recomendado)</li>
+                <li>Busca una película o serie</li>
+                <li>Genera tu guion con IA</li>
+                <li>Crea tu video profesional</li>
+                <li>Descarga todos los formatos</li>
+            </ul>
+        </div>
+        
+        <div class="requirements">
+            <h3>🔧 Requisitos Técnicos</h3>
+            <ul>
+                <li>Navegador web moderno (Chrome, Firefox, Safari, Edge)</li>
+                <li>Conexión a internet</li>
+                <li>OpenAI API Key (opcional pero recomendado)</li>
+                <li>TMDB API Key (opcional)</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 Cine Norte - Generador Automatizado de Contenido</p>
+            <p>Desarrollado con ❤️ para creadores de contenido</p>
+        </div>
+    </div>
+</body>
+</html>

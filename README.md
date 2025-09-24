@@ -1,289 +1,263 @@
-# 🎬 Cine Norte - Generador Automatizado de Contenido Audiovisual
+# 🎬 Cine Norte - Generador Automatizado de Contenido
 
-Sistema completo de automatización para generar contenido audiovisual optimizado para redes sociales, especializado en análisis cinematográfico con identidad de marca Cine Norte.
+Sistema web completo para generar contenido audiovisual optimizado para redes sociales, especializado en análisis cinematográfico con identidad de marca Cine Norte.
 
-## 🌟 Características Principales
+## ✨ Características Principales
 
-### 🔍 Análisis de Contenido Inteligente
-- **Conexión con APIs de streaming**: Netflix, Amazon Prime, Disney+, HBO Max, Paramount, Apple TV, MagisTV
-- **Análisis de viabilidad**: Evalúa contenido para potencial viral y engagement
-- **Detección automática de tendencias**: Identifica contenido popular y relevante
-- **Extracción de metadatos**: Información completa de películas y series
+### 🔍 Análisis de Contenido
+- **Búsqueda Inteligente**: Conecta con TMDB API para encontrar películas y series
+- **Contenido Trending**: Obtiene contenido popular en tiempo real
+- **Análisis de Viabilidad**: Evalúa el potencial viral del contenido
+- **Detección de Plataformas**: Identifica automáticamente la plataforma de streaming
 
 ### 📝 Generación de Guiones con IA
-- **Guiones optimizados por plataforma**: YouTube, TikTok, Instagram, Facebook, Twitter
-- **Múltiples estilos**: Dinámico, dramático, cómico, analítico
-- **Estructura profesional**: Intro, hook, trama, análisis, outro
-- **Sin spoilers importantes**: Mantiene el misterio y la intriga
-- **Exportación a .txt**: Para conversión a voz con IA
+- **OpenAI GPT-4**: Crea guiones dinámicos y atractivos
+- **Múltiples Estilos**: Cinematográfico, dramático, cómico, analítico
+- **Optimización por Plataforma**: YouTube, TikTok, Instagram, Facebook, Twitter
+- **Estructura Profesional**: Intro, hook, trama, análisis, outro
+- **Sin Spoilers**: Mantiene el misterio sin revelar giros importantes
 
-### 🎤 Síntesis de Voz y Subtítulos
-- **Voces personalizables**: Múltiples perfiles de voz (masculino, femenino, dramático, energético)
-- **Subtítulos automáticos**: Sincronizados con el audio en español
-- **Efectos emocionales**: Ajuste de velocidad, tono y volumen según el contexto
-- **Múltiples formatos**: VTT, SRT para máxima compatibilidad
+### 🎤 Síntesis de Voz Avanzada
+- **Web Speech API**: Convierte texto a voz con múltiples perfiles
+- **Voces Personalizables**: Masculino, femenino, dramático, energético
+- **Subtítulos Automáticos**: Genera subtítulos sincronizados en formato VTT/SRT
+- **Efectos Emocionales**: Ajusta tono y velocidad según la emoción
 
-### 🎬 Editor Audiovisual Profesional
-- **Branding Cine Norte**: Paleta de colores consistente (#E50914, #0A0A0A, #C0C0C0)
-- **Efectos visuales**: Transiciones, animaciones, overlays dinámicos
-- **Logo animado**: Con efectos de luces tipo reflector
-- **Música de fondo**: Libre de derechos, ajustada al tono del contenido
+### 🎬 Editor de Video Profesional
+- **Canvas API**: Crea videos con branding Cine Norte
+- **Efectos Visuales**: Gradientes, partículas, transiciones dinámicas
+- **Branding Automático**: Logo animado, colores corporativos, tipografía
+- **Múltiples Estilos**: Cinematográfico, dramático, acción, misterio
 
 ### 📱 Formatos Múltiples
-- **YouTube**: 16:9 (1920x1080) - Optimizado para desktop y TV
-- **TikTok**: 9:16 (1080x1920) - Formato vertical para móviles
-- **Instagram**: 1:1 (1080x1080) - Posts cuadrados
-- **Facebook**: 16:9 (1920x1080) - Videos de feed
-- **Twitter**: 16:9 (1280x720) - Videos de timeline
+- **YouTube**: 1920x1080 (16:9) - Formato estándar
+- **TikTok**: 1080x1920 (9:16) - Formato vertical
+- **Instagram Reels**: 1080x1920 (9:16) - Optimizado para móviles
+- **Instagram Square**: 1080x1080 (1:1) - Formato cuadrado
+- **Facebook**: 1920x1080 (16:9) - Para redes sociales
+- **Twitter**: 1280x720 (16:9) - Formato compacto
 
-### 🖼️ Generación de Miniaturas
-- **Miniaturas optimizadas**: Para cada plataforma con especificaciones únicas
-- **Múltiples estilos**: Cinematográfico, dramático, acción, misterio
-- **Branding automático**: Logo Cine Norte integrado
-- **Análisis de optimización**: Score de contraste, legibilidad y composición
+### 🖼️ Generador de Miniaturas
+- **Múltiples Plataformas**: Optimizado para cada red social
+- **Esquemas de Color**: Cinematográfico, dramático, acción, misterio
+- **Branding Inteligente**: Overlay automático de Cine Norte
+- **Análisis de Optimización**: Score de contraste, legibilidad, composición
 
 ### 🤖 Optimización con IA
-- **Análisis de engagement**: Predicción de potencial viral
-- **Optimización SEO**: Títulos, descripciones y hashtags optimizados
-- **Análisis visual**: Composición, colores y elementos llamativos
-- **Análisis de audio**: Calidad, claridad y balance musical
-- **Recomendaciones inteligentes**: Mejoras específicas para cada contenido
+- **Análisis Completo**: Contenido, engagement, viralidad, SEO
+- **Recomendaciones Inteligentes**: Mejoras específicas para cada métrica
+- **Score de Optimización**: Evaluación general del contenido
+- **Sugerencias de Mejora**: Ritmo, cortes, duración, audio
 
-## 🚀 Instalación
+## 🎨 Identidad Visual
 
-### Requisitos del Sistema
-- Python 3.8 o superior
-- 8GB RAM mínimo (16GB recomendado)
-- 10GB espacio en disco
-- GPU compatible con CUDA (opcional, para procesamiento acelerado)
+### Paleta de Colores
+- **Rojo Primario**: `#E50914` - Color principal de marca
+- **Negro Profundo**: `#0A0A0A` - Fondo principal
+- **Plateado Metálico**: `#C0C0C0` - Acentos y texto secundario
+- **Oro**: `#FFD700` - Elementos destacados
 
-### Instalación Rápida
+### Elementos de Marca
+- **Logo Animado**: Efecto de luces tipo reflector
+- **Tipografía**: Impactante y cinematográfica
+- **Efectos Visuales**: Gradientes, partículas, transiciones suaves
+- **Consistencia**: Aplicada en todos los formatos y plataformas
 
-1. **Clonar el repositorio**
-```bash
-git clone https://github.com/tu-usuario/cine-norte.git
-cd cine-norte
-```
+## 🚀 Instalación y Uso
 
-2. **Instalar dependencias**
-```bash
-pip install -r requirements.txt
-```
+### Requisitos
+- Navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Conexión a internet
+- APIs opcionales: OpenAI, TMDB
 
-3. **Configurar variables de entorno**
-```bash
-cp env_example.txt .env
-# Editar .env con tus claves de API
-```
-
-4. **Ejecutar la aplicación**
-```bash
-streamlit run main_app.py
-```
+### Configuración Rápida
+1. **Descarga los archivos** del proyecto
+2. **Abre `index.html`** en tu navegador
+3. **Configura las APIs** (opcional pero recomendado):
+   - OpenAI API para generación de guiones
+   - TMDB API para análisis de contenido
+4. **¡Comienza a crear!**
 
 ### Configuración de APIs
 
-#### OpenAI API (Requerido)
-```bash
-OPENAI_API_KEY=tu_clave_openai_aqui
-```
+#### OpenAI API (Recomendado)
+1. Obtén tu clave API en [OpenAI Platform](https://platform.openai.com/)
+2. Ve a Configuración en la aplicación
+3. Pega tu clave en el campo "OpenAI API Key"
+4. Guarda la configuración
 
-#### TMDB API (Recomendado)
-```bash
-TMDB_API_KEY=tu_clave_tmdb_aqui
-```
-
-#### Otras APIs (Opcionales)
-```bash
-HUGGINGFACE_API_KEY=tu_clave_huggingface_aqui
-OMDB_API_KEY=tu_clave_omdb_aqui
-```
+#### TMDB API (Opcional)
+1. Regístrate en [TMDB](https://www.themoviedb.org/)
+2. Obtén tu API key
+3. Configúrala en la aplicación
 
 ## 📖 Guía de Uso
 
 ### 1. Análisis de Contenido
-1. Ve a la pestaña "🔍 Análisis de Contenido"
-2. Busca películas o series por nombre
-3. Revisa los resultados y selecciona el contenido deseado
-4. Analiza la viabilidad del contenido para crear videos
+- **Buscar**: Ingresa el nombre de una película o serie
+- **Seleccionar Tipo**: Película, Serie, o Todos
+- **Ver Resultados**: Revisa información, rating, plataforma
+- **Seleccionar**: Elige el contenido que más te guste
 
 ### 2. Generación de Guion
-1. Ve a la pestaña "📝 Generación de Guion"
-2. Configura la plataforma objetivo y estilo
-3. Ajusta la duración deseada
-4. Haz clic en "Generar Guion" y espera el resultado
-5. Revisa el guion generado y descárgalo si es necesario
+- **Configurar**: Selecciona plataforma objetivo y estilo
+- **Ajustar Duración**: Usa el slider para definir duración (30-300s)
+- **Generar**: Crea el guion con IA
+- **Revisar**: Lee las secciones generadas
 
 ### 3. Creación de Video
-1. Ve a la pestaña "🎬 Creación de Video"
-2. Configura el estilo visual y perfil de voz
-3. Selecciona opciones adicionales (subtítulos, música)
-4. Haz clic en "Generar Video" y espera el procesamiento
-5. Genera formatos múltiples para todas las plataformas
+- **Configurar Audio**: Selecciona perfil de voz
+- **Configurar Visual**: Elige estilo cinematográfico
+- **Generar**: Crea el video con branding Cine Norte
+- **Ver Resultados**: Reproduce el video generado
 
-### 4. Optimización con IA
-1. Ve a la pestaña "📊 Optimización IA"
-2. Haz clic en "Analizar con IA"
-3. Revisa el análisis de engagement y viralidad
-4. Implementa las recomendaciones sugeridas
+### 4. Optimización
+- **Analizar**: Ejecuta análisis con IA
+- **Revisar Métricas**: Ve scores de engagement, viralidad, SEO
+- **Aplicar Mejoras**: Sigue las recomendaciones sugeridas
 
 ### 5. Descargas
-1. Ve a la pestaña "📁 Descargas"
-2. Descarga todos los archivos generados
-3. Limpia archivos temporales cuando termines
+- **Guion**: Descarga el texto del guion
+- **Audio**: Descarga el archivo de audio
+- **Subtítulos**: Descarga subtítulos en formato VTT
+- **Video**: Descarga el video principal
+- **Formatos**: Descarga todos los formatos para redes sociales
+- **Miniaturas**: Descarga miniaturas optimizadas
 
-## 🎨 Personalización
+## 🛠️ Arquitectura Técnica
 
-### Esquemas de Color
-```python
-# En config.py
-PRIMARY_RED = "#E50914"
-DEEP_BLACK = "#0A0A0A"
-METALLIC_SILVER = "#C0C0C0"
-```
+### Frontend Puro
+- **HTML5**: Estructura semántica y accesible
+- **CSS3**: Diseño responsivo con identidad visual
+- **JavaScript ES6+**: Lógica de aplicación modular
+- **Canvas API**: Generación de video y miniaturas
+- **Web Speech API**: Síntesis de voz
+- **Web Audio API**: Procesamiento de audio
 
-### Perfiles de Voz
-```python
-# Crear perfil personalizado
-custom_voice = voice_synthesizer.create_voice_profile(
-    name="Mi Voz",
-    language="es",
-    speed=1.0,
-    pitch=1.0,
-    volume=1.0
-)
-```
+### Módulos Principales
+- **ContentAnalyzer**: Análisis de contenido con APIs
+- **ScriptGenerator**: Generación de guiones con IA
+- **VoiceSynthesizer**: Síntesis de voz y subtítulos
+- **VideoEditor**: Edición de video con Canvas
+- **FormatGenerator**: Generación de formatos múltiples
+- **AIOptimizer**: Optimización con IA
+- **ThumbnailGenerator**: Generación de miniaturas
+- **Utils**: Utilidades y helpers
+
+### APIs Externas
+- **OpenAI GPT-4**: Generación de guiones
+- **TMDB API**: Análisis de contenido cinematográfico
+- **Web Speech API**: Síntesis de voz nativa
+
+## 🎯 Casos de Uso
+
+### Creadores de Contenido
+- **YouTubers**: Genera análisis cinematográficos profesionales
+- **TikTokers**: Crea contenido vertical optimizado
+- **Instagramers**: Desarrolla reels y posts atractivos
+- **Influencers**: Produce contenido de calidad con branding
+
+### Empresas de Marketing
+- **Agencias**: Automatiza la creación de contenido audiovisual
+- **Estudios**: Genera promocionales y trailers
+- **Streaming**: Crea contenido promocional para plataformas
+
+### Educadores
+- **Profesores**: Crea material educativo audiovisual
+- **Instituciones**: Desarrolla contenido institucional
+- **Cursos Online**: Genera videos educativos
+
+## 🔧 Personalización
 
 ### Estilos Visuales
-- **Cinematográfico**: Clásico, elegante, profesional
-- **Dinámico**: Energético, moderno, llamativo
-- **Dramático**: Intenso, emocional, impactante
+- **Cinematográfico**: Clásico y elegante
+- **Dramático**: Intenso y emocional
+- **Acción**: Dinámico y energético
+- **Misterio**: Oscuro y enigmático
+
+### Perfiles de Voz
+- **Masculino**: Profesional y autoritativo
+- **Femenino**: Elegante y expresivo
+- **Dramático**: Intenso y emotivo
+- **Energético**: Dinámico y vibrante
+
+### Plataformas Soportadas
+- **YouTube**: Análisis largos y detallados
+- **TikTok**: Contenido corto y directo
+- **Instagram**: Visual y estético
+- **Facebook**: Compartible y social
+- **Twitter**: Conciso e impactante
 
 ## 📊 Métricas y Análisis
 
-### Score de Optimización
-- **Calidad de Contenido**: 0-100 puntos
-- **Potencial de Engagement**: 0-100 puntos
-- **Probabilidad Viral**: 0-100 puntos
-- **Optimización SEO**: 0-100 puntos
-- **Impacto Visual**: 0-100 puntos
-- **Calidad de Audio**: 0-100 puntos
+### Scores de Optimización
+- **Contenido**: Calidad del guion y estructura
+- **Engagement**: Potencial de interacción
+- **Viralidad**: Probabilidad de viralización
+- **SEO**: Optimización para búsquedas
+- **Visual**: Impacto visual del video
+- **Audio**: Calidad del audio y voz
 
-### Análisis de Viabilidad
-- **Popularidad**: Basado en datos de TMDB
-- **Rating**: Calificación de usuarios
-- **Disponibilidad de tráiler**: Contenido visual disponible
-- **Calidad de descripción**: Riqueza de información
-- **Género**: Impacto visual del género
+### Recomendaciones Inteligentes
+- **Mejoras de Contenido**: Sugerencias específicas
+- **Optimización SEO**: Títulos y hashtags
+- **Ajustes Visuales**: Composición y efectos
+- **Mejoras de Audio**: Volumen y claridad
 
-## 🔧 Configuración Avanzada
+## 🚀 Roadmap Futuro
 
-### Ajustes de Video
-```python
-# En config.py
-VIDEO_QUALITY = "1080p"
-VIDEO_DURATION_MAX = 180  # segundos
-AUDIO_SAMPLE_RATE = 44100
-AUDIO_BITRATE = "192k"
-```
+### Próximas Características
+- **IA de Video**: Análisis automático de escenas
+- **Templates**: Plantillas predefinidas
+- **Colaboración**: Trabajo en equipo
+- **Analytics**: Métricas de rendimiento
+- **Integraciones**: Más APIs de streaming
 
-### Formatos Personalizados
-```python
-# Agregar nuevo formato
-custom_format = FormatSpec(
-    name="Mi Plataforma",
-    width=1920,
-    height=1080,
-    aspect_ratio="16:9",
-    platform="custom",
-    max_duration=120,
-    recommended_fps=30,
-    bitrate="4000k",
-    description="Formato personalizado"
-)
-```
+### Mejoras Técnicas
+- **WebAssembly**: Rendimiento mejorado
+- **PWA**: Aplicación web progresiva
+- **Offline**: Funcionamiento sin conexión
+- **Cloud**: Sincronización en la nube
 
-## 🐛 Solución de Problemas
-
-### Errores Comunes
-
-#### Error de API Key
-```
-Error: OpenAI API key not found
-```
-**Solución**: Configura tu clave de OpenAI en el archivo .env
-
-#### Error de Memoria
-```
-Error: Out of memory
-```
-**Solución**: Reduce la calidad del video o usa un sistema con más RAM
-
-#### Error de Dependencias
-```
-ModuleNotFoundError: No module named 'moviepy'
-```
-**Solución**: Instala las dependencias con `pip install -r requirements.txt`
-
-### Logs y Debugging
-```python
-# Habilitar logs detallados
-import logging
-logging.basicConfig(level=logging.DEBUG)
-```
-
-## 🤝 Contribuciones
+## 🤝 Contribución
 
 ### Cómo Contribuir
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Crea un Pull Request
+1. **Fork** del repositorio
+2. **Crea** una rama para tu feature
+3. **Desarrolla** tu funcionalidad
+4. **Prueba** exhaustivamente
+5. **Envía** un Pull Request
 
-### Estándares de Código
-- Usar Python 3.8+
-- Seguir PEP 8
-- Documentar funciones y clases
-- Incluir tests para nuevas funcionalidades
+### Áreas de Contribución
+- **Nuevas Plataformas**: Agregar soporte para más redes
+- **Efectos Visuales**: Nuevos estilos y animaciones
+- **APIs**: Integrar más fuentes de contenido
+- **IA**: Mejorar algoritmos de optimización
+- **UI/UX**: Mejorar la experiencia de usuario
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
 ## 🙏 Agradecimientos
 
 - **OpenAI** por la API de GPT-4
-- **TMDB** por la base de datos de películas
-- **MoviePy** por el procesamiento de video
-- **Streamlit** por el framework de interfaz
-- **Hugging Face** por los modelos de IA
+- **TMDB** por la base de datos cinematográfica
+- **Web APIs** por las tecnologías nativas del navegador
+- **Comunidad** por el feedback y contribuciones
 
 ## 📞 Soporte
 
+### Documentación
+- **Guía de Usuario**: Incluida en la aplicación
+- **API Reference**: Documentación técnica
+- **Ejemplos**: Casos de uso prácticos
+
+### Contacto
+- **Issues**: Reporta bugs en GitHub
+- **Discussions**: Preguntas y sugerencias
 - **Email**: soporte@cinenorte.com
-- **Discord**: [Servidor de Cine Norte](https://discord.gg/cinenorte)
-- **GitHub Issues**: [Reportar problemas](https://github.com/tu-usuario/cine-norte/issues)
-
-## 🔄 Actualizaciones
-
-### Versión 1.0.0
-- ✅ Análisis de contenido con APIs de streaming
-- ✅ Generación de guiones con IA
-- ✅ Síntesis de voz y subtítulos
-- ✅ Editor audiovisual con branding
-- ✅ Formatos múltiples
-- ✅ Optimización con IA
-- ✅ Generación de miniaturas
-- ✅ Interfaz web completa
-
-### Próximas Versiones
-- 🔄 Integración con más plataformas de streaming
-- 🔄 Análisis de sentimientos en tiempo real
-- 🔄 Automatización de subida a redes sociales
-- 🔄 Dashboard de analytics
-- 🔄 Colaboración en equipo
 
 ---
 
-**Cine Norte** - Donde la tecnología se encuentra con el arte cinematográfico 🎬✨
+**¡Crea contenido cinematográfico profesional con Cine Norte!** 🎬✨

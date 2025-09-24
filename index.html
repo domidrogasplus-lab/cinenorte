@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Norte - Generador Automatizado de Contenido</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+<body>
+    <!-- Header Principal -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="logo">🎬 CINE NORTE</h1>
+            <p class="tagline">Generador Automatizado de Contenido Audiovisual</p>
+        </div>
+        <div class="header-actions">
+            <button id="settingsBtn" class="btn btn-secondary">⚙️ Configuración</button>
+            <button id="helpBtn" class="btn btn-secondary">❓ Ayuda</button>
+        </div>
+    </header>
+
+    <!-- Navegación Principal -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="nav-btn active" data-tab="content-analysis">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-text">Análisis de Contenido</span>
+            </button>
+            <button class="nav-btn" data-tab="script-generation">
+                <span class="nav-icon">📝</span>
+                <span class="nav-text">Generación de Guion</span>
+            </button>
+            <button class="nav-btn" data-tab="video-creation">
+                <span class="nav-icon">🎬</span>
+                <span class="nav-text">Creación de Video</span>
+            </button>
+            <button class="nav-btn" data-tab="optimization">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Optimización IA</span>
+            </button>
+            <button class="nav-btn" data-tab="downloads">
+                <span class="nav-icon">📁</span>
+                <span class="nav-text">Descargas</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Pestaña: Análisis de Contenido -->
+        <section id="content-analysis" class="tab-content active">
+            <div class="section-header">
+                <h2>🔍 Análisis de Contenido</h2>
+                <p>Busca y analiza películas y series de las principales plataformas de streaming</p>
+            </div>
+
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-input-group">
+                        <input type="text" id="contentSearch" placeholder="Buscar película o serie... (ej: Stranger Things, The Crown)">
+                        <select id="contentType">
+                            <option value="all">Todos</option>
+                            <option value="movie">Películas</option>
+                            <option value="tv">Series</option>
+                        </select>
+                        <button id="searchBtn" class="btn btn-primary">🔍 Buscar</button>
+                    </div>
+                </div>
+
+                <div class="trending-section">
+                    <h3>🔥 Contenido Trending</h3>
+                    <button id="getTrendingBtn" class="btn btn-secondary">Obtener Contenido Popular</button>
+                    <div id="trendingContent" class="content-grid"></div>
+                </div>
+            </div>
+
+            <div id="searchResults" class="search-results"></div>
+            <div id="selectedContent" class="selected-content"></div>
+        </section>
+
+        <!-- Pestaña: Generación de Guion -->
+        <section id="script-generation" class="tab-content">
+            <div class="section-header">
+                <h2>📝 Generación de Guion</h2>
+                <p>Crea guiones optimizados con IA para diferentes plataformas</p>
+            </div>
+
+            <div id="scriptConfig" class="config-section">
+                <div class="config-grid">
+                    <div class="config-group">
+                        <label for="scriptPlatform">Plataforma Objetivo</label>
+                        <select id="scriptPlatform">
+                            <option value="youtube">YouTube</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="twitter">Twitter</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label for="scriptStyle">Estilo del Guion</label>
+                        <select id="scriptStyle">
+                            <option value="dynamic">Dinámico</option>
+                            <option value="dramatic">Dramático</option>
+                            <option value="comedic">Cómico</option>
+                            <option value="analytical">Analítico</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label for="scriptDuration">Duración (segundos)</label>
+                        <input type="range" id="scriptDuration" min="30" max="300" value="120">
+                        <span id="durationValue">120s</span>
+                    </div>
+                    <div class="config-group">
+                        <label>
+                            <input type="checkbox" id="includeSpoilers"> Incluir Spoilers Menores
+                        </label>
+                    </div>
+                </div>
+                <button id="generateScriptBtn" class="btn btn-primary">🎬 Generar Guion</button>
+            </div>
+
+            <div id="scriptResults" class="script-results"></div>
+        </section>
+
+        <!-- Pestaña: Creación de Video -->
+        <section id="video-creation" class="tab-content">
+            <div class="section-header">
+                <h2>🎬 Creación de Video</h2>
+                <p>Genera videos profesionales con branding Cine Norte</p>
+            </div>
+
+            <div id="videoConfig" class="config-section">
+                <div class="config-grid">
+                    <div class="config-group">
+                        <label for="videoStyle">Estilo Visual</label>
+                        <select id="videoStyle">
+                            <option value="cinematic">Cinematográfico</option>
+                            <option value="dynamic">Dinámico</option>
+                            <option value="dramatic">Dramático</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label for="voiceProfile">Perfil de Voz</label>
+                        <select id="voiceProfile">
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                            <option value="dramatic">Dramático</option>
+                            <option value="energetic">Energético</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label for="videoQuality">Calidad</label>
+                        <select id="videoQuality">
+                            <option value="720p">720p</option>
+                            <option value="1080p" selected>1080p</option>
+                            <option value="4k">4K</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label>
+                            <input type="checkbox" id="includeSubtitles" checked> Incluir Subtítulos
+                        </label>
+                    </div>
+                    <div class="config-group">
+                        <label>
+                            <input type="checkbox" id="includeMusic" checked> Incluir Música
+                        </label>
+                    </div>
+                </div>
+                <button id="generateVideoBtn" class="btn btn-primary">🎥 Generar Video</button>
+            </div>
+
+            <div id="videoResults" class="video-results"></div>
+            <div id="formatGeneration" class="format-generation"></div>
+        </section>
+
+        <!-- Pestaña: Optimización IA -->
+        <section id="optimization" class="tab-content">
+            <div class="section-header">
+                <h2>📊 Optimización con IA</h2>
+                <p>Analiza y optimiza tu contenido para máximo engagement</p>
+            </div>
+
+            <div class="optimization-section">
+                <button id="analyzeBtn" class="btn btn-primary">🔍 Analizar con IA</button>
+                <div id="optimizationResults" class="optimization-results"></div>
+            </div>
+        </section>
+
+        <!-- Pestaña: Descargas -->
+        <section id="downloads" class="tab-content">
+            <div class="section-header">
+                <h2>📁 Descargas</h2>
+                <p>Descarga todos los archivos generados</p>
+            </div>
+
+            <div id="downloadSection" class="download-section">
+                <div class="download-grid">
+                    <div class="download-category">
+                        <h3>📝 Guion</h3>
+                        <button id="downloadScript" class="btn btn-download">💾 Descargar Guion (.txt)</button>
+                    </div>
+                    <div class="download-category">
+                        <h3>🎤 Audio</h3>
+                        <button id="downloadAudio" class="btn btn-download">💾 Descargar Audio (.mp3)</button>
+                    </div>
+                    <div class="download-category">
+                        <h3>📝 Subtítulos</h3>
+                        <button id="downloadSubtitles" class="btn btn-download">💾 Descargar Subtítulos (.vtt)</button>
+                    </div>
+                    <div class="download-category">
+                        <h3>🎬 Video</h3>
+                        <button id="downloadVideo" class="btn btn-download">💾 Descargar Video (.mp4)</button>
+                    </div>
+                    <div class="download-category">
+                        <h3>📱 Formatos</h3>
+                        <button id="downloadFormats" class="btn btn-download">💾 Descargar Todos los Formatos</button>
+                    </div>
+                    <div class="download-category">
+                        <h3>🖼️ Miniaturas</h3>
+                        <button id="downloadThumbnails" class="btn btn-download">💾 Descargar Miniaturas</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Configuración -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>⚙️ Configuración</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="config-section">
+                    <h4>🔑 APIs</h4>
+                    <div class="input-group">
+                        <label for="openaiKey">OpenAI API Key</label>
+                        <input type="password" id="openaiKey" placeholder="sk-...">
+                    </div>
+                    <div class="input-group">
+                        <label for="tmdbKey">TMDB API Key</label>
+                        <input type="password" id="tmdbKey" placeholder="tu_clave_tmdb">
+                    </div>
+                </div>
+                <div class="config-section">
+                    <h4>🎥 Video</h4>
+                    <div class="input-group">
+                        <label for="defaultPlatform">Plataforma Principal</label>
+                        <select id="defaultPlatform">
+                            <option value="youtube">YouTube</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="instagram">Instagram</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveSettings" class="btn btn-primary">💾 Guardar</button>
+                <button class="btn btn-secondary modal-close">❌ Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Ayuda -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>❓ Ayuda</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h4>🚀 Cómo usar Cine Norte</h4>
+                    <ol>
+                        <li><strong>Análisis de Contenido:</strong> Busca películas o series populares</li>
+                        <li><strong>Generación de Guion:</strong> Crea guiones optimizados con IA</li>
+                        <li><strong>Creación de Video:</strong> Genera videos con branding Cine Norte</li>
+                        <li><strong>Optimización:</strong> Analiza y mejora tu contenido</li>
+                        <li><strong>Descargas:</strong> Obtén todos los archivos generados</li>
+                    </ol>
+                </div>
+                <div class="help-section">
+                    <h4>🔑 APIs Necesarias</h4>
+                    <ul>
+                        <li><strong>OpenAI API:</strong> Para generación de guiones (requerida)</li>
+                        <li><strong>TMDB API:</strong> Para análisis de contenido (recomendada)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificaciones -->
+    <div id="notifications" class="notifications"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p id="loadingText">Procesando...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/content-analyzer.js"></script>
+    <script src="js/script-generator.js"></script>
+    <script src="js/voice-synthesizer.js"></script>
+    <script src="js/video-editor.js"></script>
+    <script src="js/format-generator.js"></script>
+    <script src="js/ai-optimizer.js"></script>
+    <script src="js/thumbnail-generator.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
